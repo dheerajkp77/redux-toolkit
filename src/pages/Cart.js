@@ -9,10 +9,11 @@ const Cart = () => {
   const handleRemove = (id) => {
     dispatch(remove(id));
   };
+  
   return (
     <div className="cartWrapper">
       {product.map((item) => (
-        <div className="cartCard">
+        <div className="cartCard" key={item.id}>
           <img src={item.image} alt="" />
           <h5>{item?.title}</h5>
           <h5>{item?.price}</h5>
